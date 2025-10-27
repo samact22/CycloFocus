@@ -1,0 +1,62 @@
+
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Classifiche - CycloFocus</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header class="site-header"><div class="container"><h1 class="logo">CycloFocus</h1><nav class="main-nav"><a href="index.html">Home</a><a href="curiosita.html">Curiosità</a><a href="classifiche.html" class="active">Classifiche</a><a href="scheda.html">Scheda Tecnica</a><a href="contatti.html">Contatti</a></nav></div></header>
+<main class="container"><h2>Classifica UCI Individuale 2025 (Top 20)</h2>
+<p class="meta">Dati a scopo didattico. Consulta UCI/ProCyclingStats per i numeri ufficiali.</p>
+<table class="rank-table" id="rank-ind"><thead><tr><th>Pos</th><th>Atleta</th><th>Team</th><th>Punti</th></tr></thead><tbody>
+<tr><td>1</td><td>Tadej Pogačar</td><td>UAE Team Emirates</td><td>11680</td></tr>
+<tr><td>2</td><td>Remco Evenepoel</td><td>Soudal Quick-Step</td><td>11230</td></tr>
+<tr><td>3</td><td>Jonas Vingegaard</td><td>Jumbo-Visma</td><td>10950</td></tr>
+<tr><td>4</td><td>Wout van Aert</td><td>Jumbo-Visma</td><td>10450</td></tr>
+<tr><td>5</td><td>Mathieu van der Poel</td><td>Alpecin-Deceuninck</td><td>10220</td></tr>
+<tr><td>6</td><td>Primož Roglič</td><td>Jumbo-Visma</td><td>9800</td></tr>
+<tr><td>7</td><td>Matej Mohorič</td><td>Bahrain Victorious</td><td>9650</td></tr>
+<tr><td>8</td><td>David Gaudu</td><td>Groupama-FDJ</td><td>9400</td></tr>
+<tr><td>9</td><td>Adam Yates</td><td>Ineos Grenadiers</td><td>9200</td></tr>
+<tr><td>10</td><td>Elia Viviani</td><td>Cofidis</td><td>9000</td></tr>
+<tr><td>11</td><td>Greg Van Avermaet</td><td>AG2R</td><td>8600</td></tr>
+<tr><td>12</td><td>Others</td><td>—</td><td>—</td></tr>
+</tbody></table>
+<h2>Classifica Team (Top 15)</h2>
+<table class="rank-table" id="rank-team"><thead><tr><th>Pos</th><th>Team</th><th>Paese</th><th>Punti</th></tr></thead><tbody>
+<tr><td>1</td><td>UAE Team Emirates</td><td>UAE</td><td>40637</td></tr>
+<tr><td>2</td><td>Jumbo-Visma</td><td>NLD</td><td>32000</td></tr>
+<tr><td>3</td><td>Soudal Quick-Step</td><td>BEL</td><td>29800</td></tr>
+<tr><td>4</td><td>INEOS Grenadiers</td><td>GBR</td><td>27500</td></tr>
+<tr><td>5</td><td>Alpecin-Deceuninck</td><td>BEL</td><td>24500</td></tr>
+<tr><td>6</td><td>Bahrain Victorious</td><td>BHR</td><td>22000</td></tr>
+<tr><td>7</td><td>Groupama-FDJ</td><td>FRA</td><td>21000</td></tr>
+<tr><td>8</td><td>Lidl-Trek</td><td>USA</td><td>20000</td></tr>
+<tr><td>9</td><td>... </td><td>...</td><td>...</td></tr>
+</tbody></table>
+</main>
+<script>
+// Simple sortable tables: click header to sort by that column
+function makeSortable(tableId){
+  const table = document.getElementById(tableId);
+  const headers = table.querySelectorAll("th");
+  headers.forEach((th, idx) => {
+    th.style.cursor = "pointer";
+    th.addEventListener("click", () => {
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+      const asc = !th.classList.contains("asc");
+      rows.sort((a,b)=>{
+        const A = a.children[idx].innerText.trim();
+        const B = b.children[idx].innerText.trim();
+        const numA = parseFloat(A.replace(/[^0-9.-]/g,''));
+        const numB = parseFloat(B.replace(/[^0-9.-]/g,''));
+        if(!isNaN(numA) && !isNaN(numB)) return asc ? numA - numB : numB - numA;
+        return asc ? A.localeCompare(B) : B.localeCompare(A);
+      });
+      rows.forEach(r=>tbody.appendChild(r));
+      headers.forEach(h=>h.classList.remove("asc","desc"));
+      th.classList.add(asc ? "asc" : "desc");
+    });
+  });
+}
+makeSortable("rank-ind");
+makeSortable("rank-team");
+</script>
+<footer class="site-footer"><div class="container">&copy; 2025 CycloFocus</div></footer></body></html>

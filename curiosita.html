@@ -1,21 +1,92 @@
 
-<div class="card">
-  <img src="img/bici-lusso.jpg" alt="Bici di lusso">
-  <h3>Le bici più costose al mondo</h3>
-  <p>Scopri quali sono le bici da sogno che superano i 20.000€, tra materiali in titanio, carbonio e design esclusivi.</p>
-  <a class="readmore" href="articoli/bici-lusso.html">Approfondisci</a>
-</div>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curiosità – CycloFocus</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .curiosita-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin: 10px;
+      color: #222;
+    }
+    .card p {
+      font-size: 0.95rem;
+      margin: 10px;
+      color: #555;
+    }
+    .readmore {
+      display: inline-block;
+      margin: 10px;
+      padding: 8px 14px;
+      background: #e63946;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .readmore:hover {
+      background: #c92d3d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Curiosità dal mondo del ciclismo</h1>
+  </header>
 
-<div class="card">
-  <img src="img/superstizioni-ciclismo.jpg" alt="Superstizioni nel ciclismo">
-  <h3>Le superstizioni più strane nel ciclismo</h3>
-  <p>Dai numeri fortunati ai rituali prima del via: ecco le scaramanzie più curiose del gruppo.</p>
-  <a class="readmore" href="articoli/superstizioni.html">Approfondisci</a>
-</div>
+  <main>
+    <section class="curiosita-container">
 
-<div class="card">
-  <img src="img/diventare-pro.jpg" alt="Come diventare ciclista professionista">
-  <h3>Come diventare ciclista professionista</h3>
-  <p>Dal primo tesseramento alle categorie giovanili fino al passaggio al WorldTour, tutto quello che devi sapere.</p>
-  <a class="readmore" href="articoli/diventare-pro.html">Approfondisci</a>
-</div>
+      <div class="card">
+        <img src="img/bici-lusso.jpg" alt="Bici di lusso">
+        <h3>Le bici più costose al mondo</h3>
+        <p>Carbonio, titanio e design da gioielleria: alcune bici superano i 20.000€ grazie a materiali hi-tech e componenti esclusivi.</p>
+        <a class="readmore" href="articoli/bici-lusso.html">Approfondisci</a>
+      </div>
+
+      <div class="card">
+        <img src="img/superstizioni-ciclismo.jpg" alt="Superstizioni nel ciclismo">
+        <h3>Le superstizioni più strane del gruppo</h3>
+        <p>Calzini sempre uguali, scarpe allacciate nello stesso ordine o numeri fortunati: la scaramanzia è parte della cultura ciclistica.</p>
+        <a class="readmore" href="articoli/superstizioni.html">Approfondisci</a>
+      </div>
+
+      <div class="card">
+        <img src="img/diventare-pro.jpg" alt="Diventare ciclista professionista">
+        <h3>Come diventare ciclista professionista</h3>
+        <p>Dalle categorie giovanili ai contratti WorldTour: tutte le tappe per arrivare nel ciclismo che conta.</p>
+        <a class="readmore" href="articoli/diventare-pro.html">Approfondisci</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 CycloFocus — Tutti i diritti riservati</p>
+  </footer>
+</body>
+</html>

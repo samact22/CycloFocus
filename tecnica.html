@@ -3,39 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scheda tecnica – CycloFocus</title>
+  <title>Scheda Tecnica | CycloFocus</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="site-header"><div class="container"><h1 class="logo">CycloFocus</h1>
-<nav class="main-nav"><a href="index.html" class="active">Home</a><a href="curiosita.html">Curiosità</a><a href="classifiche.html">Classifiche</a><a href="tecnica.html">Scheda tecnica</a>
-<a href="contatti.html">Contatti</a></nav></div></header>
-<main>
-  <section class="page-container">
 
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo">CycloFocus</h1>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="curiosita.html">Curiosità</a>
+      <a href="classifiche.html">Classifiche</a>
+      <a href="tecnica.html" class="active">Scheda Tecnica</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+  <h2 class="section-title">Scheda Tecnica</h2>
+  <p class="intro-text">
+    Approfondimenti, guide e confronti tecnici per capire meglio il mondo delle bici da corsa.
+  </p>
+
+  <div class="articles-grid">
+
+    <!-- Articolo 1 -->
     <div class="card">
-      <img src="img/shimano.jpg" alt="Gruppo Shimano">
-      <h3>Shimano vs SRAM: le differenze</h3>
-      <p>Shimano punta sulla fluidità e la durata, con cambi precisi e silenziosi. SRAM preferisce la leggerezza e l’innovazione, grazie al sistema wireless AXS. Entrambi offrono soluzioni per ogni livello: da 12v meccanico a elettronico.</p>
-      <a class="readmore" href="articoli/shimano-vs-sram.html">Approfondisci</a>
+      <img src="img/shimano.jpg" alt="Shimano vs SRAM">
+      <div class="card-content">
+        <h3>Shimano vs SRAM: quale gruppo scegliere</h3>
+        <p>
+          Due filosofie a confronto: precisione giapponese contro innovazione americana.
+          Scopri quale gruppo trasmissione si adatta meglio al tuo stile di guida.
+        </p>
+        <a href="articoli/shimano-vs-sram.html" class="btn">Approfondisci</a>
+      </div>
     </div>
 
+    <!-- Articolo 2 -->
     <div class="card">
       <img src="img/componenti-bici.jpg" alt="Componenti bici da corsa">
-      <h3>I componenti essenziali di una bici da corsa</h3>
-      <p>Dal telaio in carbonio ai gruppi elettronici, passando per ruote aerodinamiche e manubri integrati: scopri come ogni dettaglio influenza la performance e il comfort in sella.</p>
-      <a class="readmore" href="articoli/componenti.html">Approfondisci</a>
+      <div class="card-content">
+        <h3>I componenti essenziali di una bici da corsa</h3>
+        <p>
+          Dal telaio ai freni, dalle ruote alla trasmissione: tutti i dettagli che rendono una bici performante e sicura.
+        </p>
+        <a href="articoli/componenti.html" class="btn">Approfondisci</a>
+      </div>
     </div>
+
+    <!-- Articolo 3 -->
     <div class="card">
-      <img src="img/scegliere-bici.jpg" alt="Scelta della bici da corsa">
-      <h3>Come scegliere la bici da corsa ideale</h3>
-      <p>Budget, tipo di percorsi e stile di guida sono fondamentali per scegliere la bici perfetta. Ti spieghiamo come orientarti tra geometrie, materiali e montaggi.</p>
-      <a class="readmore" href="articoli/scegliere-bici.html">Approfondisci</a>
+      <img src="img/scegliere-bici.jpg" alt="Come scegliere la bici da corsa">
+      <div class="card-content">
+        <h3>Come scegliere la bici da corsa perfetta</h3>
+        <p>
+          Materiali, geometrie, trasmissioni e budget: la guida completa per trovare la bici ideale in base ai tuoi obiettivi.
+        </p>
+        <a href="articoli/scegliere-bici.html" class="btn">Approfondisci</a>
+      </div>
     </div>
-  </section>
+
+  </div>
 </main>
-  <footer>
-    <p>© 2025 CycloFocus</p>
-  </footer>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 CycloFocus — Tutti i diritti riservati.</p>
+</footer>
+
 </body>
 </html>

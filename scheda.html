@@ -3,9 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scheda Tecnica | CycloFocus</title>
+  <title>Scheda Tecnica – CycloFocus</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .scheda-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin: 10px;
+      color: #222;
+    }
+    .card p {
+      font-size: 0.95rem;
+      margin: 10px;
+      color: #555;
+    }
+    .readmore {
+      display: inline-block;
+      margin: 10px;
+      padding: 8px 14px;
+      background: #1d3557;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .readmore:hover {
+      background: #457b9d;
+    }
+  </style>
 </head>
+
 <body>
 
 <header class="site-header">
@@ -15,66 +62,52 @@
       <a href="index.html">Home</a>
       <a href="curiosita.html">Curiosità</a>
       <a href="classifiche.html">Classifiche</a>
-      <a href="scheda.html">Scheda Tecnica</a>
+      <a href="scheda.html" class="active">Scheda Tecnica</a>
       <a href="contatti.html">Contatti</a>
     </nav>
   </div>
 </header>
 
-
-
-<!-- MAIN CONTENT -->
-<main class="container">
-  <h2 class="section-title">Scheda Tecnica</h2>
-  <p class="intro-text">
+<main>
+  <h2 style="text-align:center; margin-top:30px;">Scheda Tecnica</h2>
+  <p style="text-align:center; max-width:800px; margin:0 auto 30px; color:#555;">
     Approfondimenti, guide e confronti tecnici per capire meglio il mondo delle bici da corsa.
   </p>
 
-  <div class="articles-grid">
+  <section class="scheda-container">
 
-    <!-- Articolo 1 -->
     <div class="card">
       <img src="img/shimano.jpg" alt="Shimano vs SRAM">
-      <div class="card-content">
-        <h3>Shimano vs SRAM: quale gruppo scegliere</h3>
-        <p>
-          Due filosofie a confronto: precisione giapponese contro innovazione americana.
-          Scopri quale gruppo trasmissione si adatta meglio al tuo stile di guida.
-        </p>
-        <a href="articoli/shimano-vs-sram.html" class="btn">Approfondisci</a>
-      </div>
+      <h3>Shimano vs SRAM: il duello dei gruppi trasmissione</h3>
+      <p>
+        Precisione e fluidità contro leggerezza e innovazione: Shimano e SRAM rappresentano due filosofie opposte nella gestione del cambio elettronico.
+      </p>
+      <a class="readmore" href="articoli/shimano-vs-sram.html">Approfondisci</a>
     </div>
 
-    <!-- Articolo 2 -->
     <div class="card">
       <img src="img/componenti-bici.jpg" alt="Componenti bici da corsa">
-      <div class="card-content">
-        <h3>I componenti essenziali di una bici da corsa</h3>
-        <p>
-          Dal telaio ai freni, dalle ruote alla trasmissione: tutti i dettagli che rendono una bici performante e sicura.
-        </p>
-        <a href="articoli/componenti.html" class="btn">Approfondisci</a>
-      </div>
+      <h3>I componenti essenziali di una bici da corsa</h3>
+      <p>
+        Dal telaio ai freni, dalle ruote alla trasmissione: tutti i dettagli che rendono una bici performante e sicura.
+      </p>
+      <a class="readmore" href="articoli/componenti.html">Approfondisci</a>
     </div>
 
-    <!-- Articolo 3 -->
     <div class="card">
       <img src="img/scegliere-bici.jpg" alt="Come scegliere la bici da corsa">
-      <div class="card-content">
-        <h3>Come scegliere la bici da corsa perfetta</h3>
-        <p>
-          Materiali, geometrie, trasmissioni e budget: la guida completa per trovare la bici ideale in base ai tuoi obiettivi.
-        </p>
-        <a href="articoli/scegliere-bici.html" class="btn">Approfondisci</a>
-      </div>
+      <h3>Come scegliere la bici da corsa perfetta</h3>
+      <p>
+        Materiali, geometrie, trasmissioni e budget: la guida completa per trovare la bici ideale in base ai tuoi obiettivi.
+      </p>
+      <a class="readmore" href="articoli/scegliere-bici.html">Approfondisci</a>
     </div>
 
-  </div>
+  </section>
 </main>
 
-<!-- FOOTER -->
 <footer>
-  <p>&copy; 2025 CycloFocus — Tutti i diritti riservati.</p>
+  <p>© 2025 CycloFocus — Tutti i diritti riservati</p>
 </footer>
 
 </body>
